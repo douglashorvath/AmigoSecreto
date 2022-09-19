@@ -1,0 +1,94 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Amigo Secreto por Douglas Horvath :: LiberteTi</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/jquery.countdown.js" type="text/javascript"></script>
+<link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+			jQuery(document).ready(function() {
+                                var today = new Date();
+                                var dd = today.getDate();
+                                var mm = today.getMonth()+1; //January is 0!
+                                var yyyy = today.getFullYear();
+                                var hour = today.getHours();
+                                var min = today.getMinutes();
+                                if(dd<10) {
+                                    dd = '0'+dd;
+                                } 
+
+                                if(mm<10) {
+                                    mm = '0'+mm;
+                                } 
+				$('#countdown').countDown({
+					targetDate: {
+						'day': 		dd,
+						'month': 	mm,
+						'year': 	yyyy,
+						'hour': 	hour,
+						'min': 		min+5,
+						'sec': 		0
+					}
+				});				
+			});
+		</script>
+</head>
+ <body>	
+	  <div class="main">
+		 <div class="header">
+		   <div class="wrap">
+			 <div class="logo">
+                             <a href="index.php"><img alt="LiberteTI" src="images/logo.png"/></a>
+				<h1>Amigo Secreto</h1>
+		     </div>
+		      <div class="clear"></div>
+		   </div>
+	   </div>
+	   
+	<div class="wrap">   
+	   <div class="content">
+			<h2>BEM VINDOS AO AMIGO SECRETO DA GALERA! =D</h2>
+                        <h3>Você pode iniciar um novo jovo de amigo secreto ou solicitar o reenvio dos nomes de um jogo criado usando o código. O algorítimo garante que ninguém pegará à sí
+                        mesmo e também há a opção de forçar uma sequência perfeita, onde o jogo não terá que recomeçar nenhuma vez.</h3>
+			
+				
+		<!-- Count down timer --->
+<!--		<div id="countdown">	
+					<div class="dash minutes_dash">
+						<span class="dash_title">minutes</span>
+						<div class="digit"><div class="top" style="display: none;">0</div><div class="bottom" style="display: block;">0</div></div>
+						<div class="digit"><div class="top" style="display: none;">9</div><div class="bottom" style="display: block;">9</div></div>
+					</div>
+
+					<div class="dash seconds_dash">
+						<span class="dash_title">seconds</span>
+						<div class="digit"><div class="top" style="display: none;">2</div><div class="bottom" style="display: block;">2</div></div>
+						<div class="digit"><div class="top" style="display: none;">6</div><div class="bottom" style="display: block;">6</div></div>
+					</div>	
+				<div class="clear"></div>				
+			</div>			  -->
+	   <div class="srch">
+			<form action="inicio_amigo_secreto.php" class="searchbox">
+			   
+			    <input  class="submit" type="submit" value="Iniciar Amigo Secreto">
+                            
+			</form>
+                        <br/>
+                        <form method="POST" action="reenviar_emails.php" class="searchbox">
+			   
+                            <input required class="search codigo" type="text" name="codigo" placeholder="Código do Jogo"><br/><br/>
+			    <input class="submit" name="submit" type="submit" value="Reenviar Email Para Amigos">
+                            
+			</form>
+		</div>
+	</div> 	
+	  <div class="copy_right">
+	        <p>AmigoSecreto | Design by  <a href="http://www.liberteti.com">LiberteTI</a></p>
+     	</div>
+  </div>
+</div>
+ </body>
+ </html>
